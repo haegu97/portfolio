@@ -70,7 +70,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   }, [isOpen]);
 
   if (!isOpen || !project) return null;
-  console.log(project);
 
   const settings = {
     dots: true,
