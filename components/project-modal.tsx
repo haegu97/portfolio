@@ -129,15 +129,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           </h3>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {project.features.map((feature, index) => (
-              <li
-                key={index}
-                className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-              >
-                <h3 className="text-2xl font-semibold mb-2 flex items-center">
-                  {feature.title}
-                </h3>
-                <p className="text-lg">{feature.description}</p>
-              </li>
+              <div key={index}>
+                <li className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-2xl font-semibold mb-2 flex items-center">
+                    {feature.title}
+                  </h3>
+                  <p className="text-lg">{feature.description}</p>
+                </li>
+              </div>
             ))}
           </ul>
         </div>
@@ -149,17 +148,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           </h3>
           <ul className="flex flex-col gap-8">
             {project.tags.map((tag, index) => (
-              <li
-                key={index}
-                className="bg-gray-100 shadow-lg dark:bg-gray-600 px-4 py-2 rounded-md text-base dark:text-white/80"
-              >
-                <span className="text-2xl font-semibold mb-2 flex items-center">
-                  {tag.skill}
-                </span>
-                <p className="text-lg text-gray-600 dark:text-white/70 mt-1">
-                  {tag.reason}
-                </p>
-              </li>
+              <div key={index}>
+                <li className="bg-gray-100 shadow-lg dark:bg-gray-600 px-4 py-2 rounded-md text-base dark:text-white/80">
+                  <span className="text-2xl font-semibold mb-2 flex items-center">
+                    {tag.skill}
+                  </span>
+                  <p className="text-lg text-gray-600 dark:text-white/70 mt-1">
+                    {tag.reason}
+                  </p>
+                </li>
+              </div>
             ))}
           </ul>
         </div>
@@ -186,15 +184,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           </h3>
           <ul className="list-none space-y-6">
             {project.contributes.map((contribute, index) => (
-              <li
-                key={index}
-                className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-              >
-                <h3 className="text-2xl font-semibold mb-2 flex items-center">
-                  {contribute.title}
-                </h3>
-                <p className="text-lg">{contribute.description}</p>
-              </li>
+              <div key={index}>
+                <li className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-2xl font-semibold mb-2 flex items-center">
+                    {contribute.title}
+                  </h3>
+                  <p className="text-lg">{contribute.description}</p>
+                </li>
+              </div>
             ))}
           </ul>
         </div>
@@ -206,37 +203,36 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           </h3>
           <ul className="list-none space-y-6">
             {project.troubleShooting.map((trouble, index) => (
-              <li
-                key={index}
-                className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-              >
-                <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-200">
-                    {trouble.title}
-                  </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-400 mt-2">
-                    {trouble.description}
-                  </p>
-                </div>
-                <div className="flex flex-col gap-6">
-                  <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
-                    <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
-                      ✅ Solution
-                    </p>
-                    <p className="text-lg text-gray-800 dark:text-gray-300">
-                      {trouble.solution}
+              <div key={index}>
+                <li className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-200">
+                      {trouble.title}
+                    </h3>
+                    <p className="text-lg text-gray-700 dark:text-gray-400 mt-2">
+                      {trouble.description}
                     </p>
                   </div>
-                  <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
-                    <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
-                      👌 Learned
-                    </p>
-                    <p className="text-lg text-gray-800 dark:text-gray-300">
-                      {trouble.learned}
-                    </p>
+                  <div className="flex flex-col gap-6">
+                    <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
+                      <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
+                        ✅ Solution
+                      </p>
+                      <p className="text-lg text-gray-800 dark:text-gray-300">
+                        {trouble.solution}
+                      </p>
+                    </div>
+                    <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
+                      <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
+                        👌 Learned
+                      </p>
+                      <p className="text-lg text-gray-800 dark:text-gray-300">
+                        {trouble.learned}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </div>
             ))}
           </ul>
         </div>
@@ -249,9 +245,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="w-full ">
             <Slider {...settings}>
               {project.images.map((image, index) => (
-                <div className=" p-4 rounded-2xl">
+                <div key={index} className=" p-4 rounded-2xl">
                   <Image
-                    key={index}
                     src={image}
                     width={300}
                     height={300}
