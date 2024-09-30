@@ -355,10 +355,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     };
   }, [isOpen]);
 
-  if (!isOpen || !project) return null;
-
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  if (!isOpen || !project) return null;
 
   const settings = {
     dots: true,
