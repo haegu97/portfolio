@@ -39,6 +39,36 @@ export const links = [
   },
 ] as const;
 
+export const activitiesData = [
+  {
+    title: "프로그래머스 데브코스",
+    description: [
+      {
+        description: "Cloud Application Engineering 과정 수료.",
+      },
+      {
+        description:
+          "HTML, CSS, JavaScript의 기본 지식을 바탕으로, React와 React Native에 중점을 두어 학습하였습니다.",
+      },
+    ],
+    date: "2023.12 ~ 2024.05",
+  },
+  {
+    title: "스터디 운영",
+    description: [
+      {
+        description:
+          "알고리즘 스터디를 운영하며, 프로그래밍 대회 준비와 알고리즘 실력 향상을 목표로 활동하고 있습니다.",
+      },
+      {
+        description:
+          "JavaScript 스터디를 운영하며, JavaScript의 기본 문법과 실전 활용 방법을 공부하고 있습니다.",
+      },
+    ],
+    date: "2024.05 ~ 진행중",
+  },
+] as const;
+
 export const projectsData = [
   {
     title: "ItZip",
@@ -372,13 +402,7 @@ export const projectsData = [
       },
     ],
     imageUrl: wordanalyticsImg,
-    images: [
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-    ],
+    images: [],
   },
 ] as const;
 
