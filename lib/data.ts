@@ -34,39 +34,8 @@ export const links = [
     hash: "#projects",
   },
   {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
-] as const;
-
-export const experiencesData = [
-  {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    name: "Activities",
+    hash: "#activities",
   },
 ] as const;
 
@@ -77,35 +46,31 @@ export const projectsData = [
 
     features: [
       {
-        title: "이력서",
-        description:
-          "개인의 경력, 학력, 기술 등을 요약한 문서로, 채용 과정에서 지원자의 자격과 능력을 나타냅니다.",
-      },
-      {
         title: "채용 공고",
         description:
-          "회사가 새로운 직원을 채용하기 위해 공개하는 직무 내용, 자격 요건, 지원 방법 등을 포함한 안내문입니다.",
+          "개발 취준생들이 여러 회사의 최신 채용 정보를 한 곳에서 확인할 수 있습니다.",
       },
       {
         title: "학습",
         description:
-          "새로운 지식을 습득하거나 기존 지식을 확장하기 위해 정보를 탐색하고 학습하는 과정입니다.",
+          "개발에 필요한 기술과 지식을 습득하고 확장할 수 있는 학습 자료를 제공합니다.",
       },
       {
         title: "블로그",
         description:
-          "개인이나 조직이 특정 주제에 대해 글을 작성하고 공개하는 온라인 플랫폼으로, 정보 공유와 커뮤니케이션의 도구로 사용됩니다.",
+          "개발 취준생들이 자신의 경험과 지식을 공유할 수 있는 블로그 공간입니다.",
       },
     ],
+
     troubleShooting: [
       {
         title: "기술 퀴즈 생성 후 바로 업데이트",
         description:
           "기술 퀴즈를 생성하고 새로고침을 해야 업데이트가 되는 문제가 발생했습니다.",
         solution:
-          "React-query의 invalidateQueries를 사용하여, 기술 퀴즈를 생성하고 바로 업데이트할 수 있도록 구현했습니다. 새로운 퀴즈가 생성된 후 해당 데이터를 최신 상태로 유지하기 위해 invalidateQueries를 통해 캐시된 데이터를 무효화하고, 서버에서 최신 데이터를 다시 가져오도록 했습니다. 이를 통해 사용자가 새로고침 없이도 최신 퀴즈 목록을 볼 수 있도록 개선하였습니다. 또한, 비동기 처리 중 발생할 수 있는 상태 관리 이슈를 방지하기 위해 optimistic update를 사용하여 사용자 경험을 향상시켰습니다.",
+          "React-query의 invalidateQueries를 사용하여, 기술 퀴즈를 생성하고 바로 업데이트할 수 있도록 구현했습니다. 새로운 퀴즈가 생성된 후 해당 데이터를 최신 상태로 유지하기 위해 invalidateQueries를 통해 캐시된 데이터를 무효화하고, 서버에서 최신 데이터를 다시 가져오도록 했습니다. 이를 통해 사용자가 새로고침 없이도 최신 퀴즈 목록을 볼 수 있도록 개선하였습니다.",
         learned:
-          "이 문제를 해결하면서 React-query의 캐시 관리와 invalidateQueries의 역할을 깊이 이해하게 되었습니다. 특히, 서버 상태를 효율적으로 동기화하고, 사용자 경험을 향상시키기 위한 비동기 처리 전략의 중요성을 배웠습니다. 또한, optimistic update를 통해 사용자 인터페이스를 더 신속하게 업데이트하고, 비동기 작업이 실패할 경우 롤백하는 방법을 익혔습니다. 이러한 기술들을 통해 사용자 경험을 개선하는 동시에 서버와 클라이언트 간의 상태 동기화 문제를 보다 효과적으로 관리할 수 있다는 것을 깨달았습니다.",
+          "이 문제를 해결하면서 React-query의 캐시 관리와 invalidateQueries의 역할을 이해하게 되었습니다. 특히, 서버 상태를 효율적으로 동기화하고, 사용자 경험을 향상시키기 위한 비동기 처리 전략의 중요성을 배웠습니다. 또한, optimistic update를 통해 사용자 인터페이스를 더 신속하게 업데이트하고, 비동기 작업이 실패할 경우 롤백하는 방법을 익혔습니다. 이러한 기술들을 통해 사용자 경험을 개선하는 동시에 서버와 클라이언트 간의 상태 동기화 문제를 보다 효과적으로 관리할 수 있다는 것을 깨달았습니다.",
       },
       {
         title: "검색 입력 시 과도한 API 호출 문제",
@@ -114,7 +79,7 @@ export const projectsData = [
         solution:
           "debounce 기능을 사용하여 사용자가 입력을 멈춘 후 일정 시간이 지난 후에만 API 요청이 발생하도록 개선했습니다. Lodash의 debounce 함수를 활용하여 300ms의 지연 시간을 설정하였고, 이를 통해 사용자가 입력 중일 때는 API 요청이 발생하지 않도록 하였습니다. 이로 인해 API 호출 빈도가 크게 줄어들었고, 서버 성능이 개선되었으며, 사용자의 검색 경험도 더 부드럽게 개선되었습니다. 또한, React의 useEffect 훅을 활용해 컴포넌트가 언마운트될 때 debounce 함수가 정리되도록 처리하여 메모리 누수를 방지했습니다.",
         learned:
-          "이 과정을 통해 사용자의 입력과 같은 빈번한 이벤트에 대해 실시간으로 처리하는 경우에는 성능 최적화를 위한 추가적인 고려가 필요하다는 것을 배웠습니다. debounce와 같은 기술을 적절히 활용하면 서버와 클라이언트 모두에서 불필요한 작업을 줄일 수 있으며, 사용자 경험을 개선할 수 있다는 점을 깨달았습니다. 또한, React에서의 메모리 관리와 함수의 메모이제이션의 중요성도 다시 한번 느꼈습니다.",
+          "이 과정을 통해 사용자의 입력과 같은 빈번한 이벤트에 대해 실시간으로 처리하는 경우에는 성능 최적화를 위한 추가적인 고려가 필요하다는 것을 배웠습니다. debounce와 같은 기술을 적절히 활용하면 서버와 클라이언트 모두에서 불필요한 작업을 줄일 수 있으며, 사용자 경험을 개선할 수 있다는 점을 깨달았습니다.",
       },
       {
         title: "서버 및 API 미비 시 Postman Mock 서버 활용",
@@ -126,7 +91,7 @@ export const projectsData = [
           "Mock 서버를 활용하는 과정에서 백엔드와의 협업 시 발생할 수 있는 지연 상황에 대한 대응 전략을 학습했습니다. Mock 서버를 통해 개발 초기 단계에서도 프론트엔드 개발을 병행할 수 있으며, 서버가 준비될 때까지 발생할 수 있는 인터페이스 불일치를 미리 발견하여 수정할 수 있음을 깨달았습니다. 또한, Postman의 Mock 서버 기능을 활용하여 API 설계와 응답 형식을 명확히 하고, 팀 간 협업을 원활히 진행할 수 있는 방법에 대해 배웠습니다.",
       },
     ],
-    period: "2024.06 ~ 2021.08",
+    period: "2024.06 ~ ",
     people: {
       frontend: 4,
       backend: 5,
@@ -142,12 +107,12 @@ export const projectsData = [
       {
         title: "기술 퀴즈 생성",
         description:
-          "Zod와 React Hook Form을 사용하여 유저가 기술 퀴즈를 생성할 수 있는 기능을 구현했습니다. Zod를 이용한 강력한 유효성 검사를 통해 사용자 입력을 검증하고, React Hook Form으로 효율적인 폼 관리를 실현했습니다. 퀴즈가 생성된 후에는 서버에 저장되며, 이를 통해 다른 유저들이 새로 생성된 퀴즈를 검색하고 풀 수 있게 하였습니다. 이 기능을 통해 사용자 생성 콘텐츠의 참여를 유도하고, 퀴즈 플랫폼의 다양성과 풍부함을 증가시킬 수 있었습니다.",
+          "Zod와 React Hook Form을 사용하여 유저가 기술 퀴즈를 생성할 수 있는 기능을 구현했습니다. Zod를 활용한 유효성 검사를 통해 사용자 입력을 검증하고, React Hook Form으로 효율적인 폼 관리를 실현했습니다. 퀴즈가 생성된 후에는 서버에 저장되며, 이를 통해 다른 유저들이 새로 생성된 퀴즈를 검색하고 풀 수 있게 하였습니다. 이 기능을 통해 사용자 생성 콘텐츠의 참여를 유도하고, 퀴즈 플랫폼의 다양성과 풍부함을 증가시킬 수 있었습니다.",
       },
       {
         title: "알고리즘 추천",
         description:
-          "Solved.ac API를 활용하여 유저의 티어에 맞는 알고리즘 문제를 추천하는 기능을 구현했습니다. 유저의 현재 티어에 기반하여 적절한 난이도의 문제를 추천함으로써, 개인 맞춤형 학습을 지원하고 알고리즘 문제 풀이의 효율성을 높였습니다. 추천 시스템은 유저의 티어와 문제 해결 내역을 분석하여 최적의 문제를 제시하며, 이를 통해 유저가 자신의 실력을 단계적으로 향상시킬 수 있도록 도왔습니다.",
+          "Solved.ac API를 활용하여 유저의 티어에 맞는 알고리즘 문제를 추천하는 기능을 구현했습니다. 유저의 현재 티어에 기반하여 적절한 난이도의 문제를 추천함으로써, 개인 맞춤형 학습을 지원하고 알고리즘 문제 풀이의 효율성을 높였습니다.",
       },
     ],
     tags: [
@@ -184,21 +149,11 @@ export const projectsData = [
     ],
     imageUrl: corpcommentImg,
     images: [
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
-      "/corpcomment.png",
+      "/project/itzip/itzipImage1.png",
+      "/project/itzip/itzipImage2.png",
+      "/project/itzip/itzipImage3.png",
+      "/project/itzip/itzipImage4.png",
+      "/project/itzip/itzipImage5.png",
     ],
   },
   {
