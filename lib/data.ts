@@ -21,10 +21,10 @@ export const links = [
     name: "Home",
     hash: "#home",
   },
-  {
-    name: "About",
-    hash: "#about",
-  },
+  // {
+  //   name: "About",
+  //   hash: "#about",
+  // },
   {
     name: "Skills",
     hash: "#skills",
@@ -58,7 +58,7 @@ export const activitiesData = [
     description: [
       {
         description:
-          "알고리즘 스터디를 운영하며, 프로그래밍 대회 준비와 알고리즘 실력 향상을 목표로 활동하고 있습니다.",
+          "알고리즘 스터디를 운영하며, 알고리즘 실력 향상을 목표로 활동하고 있습니다.",
       },
       {
         description:

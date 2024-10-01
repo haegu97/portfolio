@@ -1,4 +1,4 @@
-import About from "@/components/about";
+// import About from "@/components/about";
 import Activities from "@/components/activities";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects";
@@ -10,7 +10,7 @@ const HomePage = () => {
     <main className="flex flex-col items-center px-4">
       <Intro />
       <SectionDivider />
-      <About />
+      {/* <About /> */}
       <Skills />
       <Projects />
       <Activities />

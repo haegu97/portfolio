@@ -35,17 +35,17 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40 mx-auto"
     >
       <SectionHeading>My skills</SectionHeading>
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 text-white">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 justify-items-center text-white">
         {skillData.map(
           (skill, index) =>
             skill && (
               <motion.div
                 key={index}
-                className="p-4 bg-gray-800 rounded-lg dark:bg-gray-700 dark:text-white"
+                className="w-11/12 sm:w-auto max-w-sm p-4 bg-gray-800 rounded-lg dark:bg-gray-700 dark:text-white"
                 variants={fadeInAnimationVariants}
                 initial="initial"
                 animate="animate"
