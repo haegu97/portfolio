@@ -178,22 +178,26 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         </div>
 
         {/* 프로젝트 기능 소개 */}
-        <div>
-          <h3 className="font-bold text-2xl sm:text-3xl border-b pb-4 w-full mb-10 border-zinc-400">
-            ⚙️ 프로젝트 기능
-          </h3>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {project.features.map((feature, index) => (
-              <li
-                key={index}
-                className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-              >
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-lg">{feature.description}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {project.features.length > 0 && (
+          <div>
+            <h3 className="font-bold text-2xl sm:text-3xl border-b pb-4 w-full mb-10 border-zinc-400">
+              ⚙️ 프로젝트 기능
+            </h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {project.features.map((feature, index) => (
+                <li
+                  key={index}
+                  className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+                >
+                  <h3 className="text-xl font-semibold mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-lg">{feature.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* 사용한 기술 스택 */}
         <div className="w-full flex flex-col gap-6">
@@ -231,24 +235,26 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         </div>
 
         {/* 기여 부분 */}
-        <div className="w-full flex flex-col gap-8 justify-center items-start">
-          <h3 className="font-bold text-2xl sm:text-3xl border-b pb-4 w-full border-zinc-400">
-            🙋‍♂️ 기여 부분
-          </h3>
-          <ul className="list-none space-y-6">
-            {project.contributes.map((contribute, index) => (
-              <li
-                key={index}
-                className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-              >
-                <h3 className="text-xl font-semibold mb-2">
-                  {contribute.title}
-                </h3>
-                <p className="text-lg">{contribute.description}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {project.contributes.length > 0 && (
+          <div className="w-full flex flex-col gap-8 justify-center items-start">
+            <h3 className="font-bold text-2xl sm:text-3xl border-b pb-4 w-full border-zinc-400">
+              🙋‍♂️ 기여 부분
+            </h3>
+            <ul className="list-none space-y-6">
+              {project.contributes.map((contribute, index) => (
+                <li
+                  key={index}
+                  className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+                >
+                  <h3 className="text-xl font-semibold mb-2">
+                    {contribute.title}
+                  </h3>
+                  <p className="text-lg">{contribute.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Trouble Shooting */}
         <div className="w-full flex flex-col">
