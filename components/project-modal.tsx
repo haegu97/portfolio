@@ -79,27 +79,27 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // 반응형을 위해 1로 설정
+    slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 640, // 작은 화면에서는 1개 슬라이드
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // 중간 화면에서는 2개 슬라이드
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 1024, // 큰 화면에서는 3개 슬라이드
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -125,8 +125,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           gap-8 
           items-center 
           w-full 
-          max-w-sm sm:max-w-3xl 
-          max-h-[80vh] 
+          max-w-sm sm:max-w-5xl 
+          max-h-[85vh] 
           bg-white 
           dark:text-white 
           dark:bg-zinc-900 
@@ -309,8 +309,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       alt="project"
                       className="w-full h-auto rounded-xl p-2 border-2 cursor-pointer"
                       style={{
-                        maxHeight: "500px", // 원하는 최대 높이로 조정
-                        objectFit: "contain", // 이미지 비율을 유지하며 크기 조정
+                        maxHeight: "500px",
+                        objectFit: "contain",
                       }}
                       onClick={() => handleImageClick(image)}
                     />
