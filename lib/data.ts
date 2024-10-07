@@ -330,6 +330,11 @@ export const projectsData = [
         reason:
           "Tailwind CSS는 CSS 프레임워크로, 클래스 이름을 통해 스타일을 적용할 수 있습니다. 반응형 디자인을 쉽게 구현할 수 있고, 커스터마이징이 용이합니다. 이를 통해 디자인 시스템을 효율적으로 구축하고, 일관된 디자인을 유지할 수 있었습니다.",
       },
+      {
+        skill: "Zustand",
+        reason:
+          "다크모드 토글 기능을 구현하기 위해 Zustand를 사용했습니다. Zustand는 간단하고 직관적인 API를 제공하며, 컴포넌트 간의 상태 관리를 효율적으로 처리할 수 있습니다. 이를 통해 사용자 경험을 개선하고, 컴포넌트 간의 데이터 전달을 간소화할 수 있었습니다.",
+      },
     ],
     imageUrl: wordanalyticsImg,
     images: [],
