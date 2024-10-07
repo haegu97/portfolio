@@ -257,46 +257,48 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         )}
 
         {/* Trouble Shooting */}
-        <div className="w-full flex flex-col">
-          <h3 className="font-bold text-2xl sm:text-3xl border-b pb-4 w-full mb-10 border-zinc-400">
-            🛠️ TroubleShooting
-          </h3>
-          <ul className="list-none space-y-6">
-            {project.troubleShooting.map((trouble, index) => (
-              <li
-                key={index}
-                className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-              >
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-200">
-                    {trouble.title}
-                  </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-400 mt-2">
-                    {trouble.description}
-                  </p>
-                </div>
-                <div className="flex flex-col gap-6">
-                  <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
-                    <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
-                      ✅ Solution
-                    </p>
-                    <p className="text-lg text-gray-800 dark:text-gray-300">
-                      {trouble.solution}
+        {project.troubleShooting.length > 0 && (
+          <div className="w-full flex flex-col">
+            <h3 className="font-bold text-2xl sm:text-3xl border-b pb-4 w-full mb-10 border-zinc-400">
+              🛠️ TroubleShooting
+            </h3>
+            <ul className="list-none space-y-6">
+              {project.troubleShooting.map((trouble, index) => (
+                <li
+                  key={index}
+                  className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+                >
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-200">
+                      {trouble.title}
+                    </h3>
+                    <p className="text-lg text-gray-700 dark:text-gray-400 mt-2">
+                      {trouble.description}
                     </p>
                   </div>
-                  <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
-                    <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
-                      👌 Learned
-                    </p>
-                    <p className="text-lg text-gray-800 dark:text-gray-300">
-                      {trouble.learned}
-                    </p>
+                  <div className="flex flex-col gap-6">
+                    <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
+                      <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
+                        ✅ Solution
+                      </p>
+                      <p className="text-lg text-gray-800 dark:text-gray-300">
+                        {trouble.solution}
+                      </p>
+                    </div>
+                    <div className="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-inner">
+                      <p className="text-lg font-semibold text-gray-900 dark:text-gray-200">
+                        👌 Learned
+                      </p>
+                      <p className="text-lg text-gray-800 dark:text-gray-300">
+                        {trouble.learned}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* 프로젝트 이미지 */}
         {project.images && project.images.length > 0 && (

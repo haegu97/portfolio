@@ -1,10 +1,6 @@
-import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import itzipMainImage from "@/public/project/itzip/itzipImage3.png";
+import sharebbyMainImage from "@/public/project/sharebby/sharebbyMainImage.png";
+import myWebsiteMainImage from "@/public/project/website/myWebsiteMainImage.png";
 
 import htmlIcon from "@/public/skillsIcon/htmlIcon.png";
 import cssIcon from "@/public/skillsIcon/cssIcon.png";
@@ -167,23 +163,20 @@ export const projectsData = [
           "React Query를 통해 캐시와 상태 관리를 효율적으로 처리할 수 있으며, 이를 통해 성능을 최적화할 수 있었습니다.",
       },
       {
-        skill: "Jotai",
-        reason:
-          "Jotai는 간단하고 직관적인 API를 제공하며, 불필요한 리렌더링을 방지할 수 있습니다. 이를 통해 상태 관리를 효율적으로 처리하고, 컴포넌트 간의 데이터 전달을 간소화할 수 있었습니다.",
-      },
-      {
         skill: "zod",
         reason:
           "Zod는 타입 안정성을 제공하고, 데이터의 무결성을 보장할 수 있습니다. 이를 통해 데이터의 유효성을 검증하고, 안전한 데이터 처리를 보장할 수 있었습니다.",
       },
     ],
-    imageUrl: corpcommentImg,
+    imageUrl: itzipMainImage,
     images: [
       "/project/itzip/itzipImage1.png",
       "/project/itzip/itzipImage2.png",
       "/project/itzip/itzipImage3.png",
       "/project/itzip/itzipImage4.png",
       "/project/itzip/itzipImage5.png",
+      "/project/itzip/itzipImage6.png",
+      "/project/itzip/itzipImage7.png",
     ],
   },
   {
@@ -261,7 +254,7 @@ export const projectsData = [
           "Firebase는 서버 설정 없이 바로 클라우드 기반의 백엔드를 사용할 수 있게 하여 초기 개발 속도를 크게 단축시켰습니다. 이를 통해 백엔드 인프라 구성 시간을 절약했습니다.",
       },
     ],
-    imageUrl: rmtdevImg,
+    imageUrl: sharebbyMainImage,
     images: [
       "/project/sharebby/sharebbyImage1.png",
       "/project/sharebby/sharebbyImage2.png",
@@ -282,31 +275,24 @@ export const projectsData = [
     description: "나를 소개하는 웹사이트입니다. ",
     features: [
       {
-        title: "취미 공유",
-        description: "나의 취미를 공유하고, 다른 사람들의 취미를 찾아보세요!",
-      },
-    ],
-    troubleShooting: [
-      {
-        title: "채팅 기능",
+        title: "다크 모드",
         description:
-          "채팅 기능을 구현하면서, 채팅방을 만들고, 메시지를 보내고 받는 기능을 구현했습니다. 또한, 채팅방을 나가거나, 채팅방을 만들어 채팅을 할 수 있도록 구현했습니다.",
-        solution:
-          "React-query의 invalidateQueries를 사용하여, 기술 퀴즈를 생성하고 바로 업데이트할 수 있도록 구현했습니다. 새로운 퀴즈가 생성된 후 해당 데이터를 최신 상태로 유지하기 위해 invalidateQueries를 통해 캐시된 데이터를 무효화하고, 서버에서 최신 데이터를 다시 가져오도록 했습니다. 이를 통해 사용자가 새로고침 없이도 최신 퀴즈 목록을 볼 수 있도록 개선하였습니다. 또한, 비동기 처리 중 발생할 수 있는 상태 관리 이슈를 방지하기 위해 optimistic update를 사용하여 사용자 경험을 향상시켰습니다.",
-        learned:
-          "이 문제를 해결하면서 React-query의 캐시 관리와 invalidateQueries의 역할을 깊이 이해하게 되었습니다. 특히, 서버 상태를 효율적으로 동기화하고, 사용자 경험을 향상시키기 위한 비동기 처리 전략의 중요성을 배웠습니다. 또한, optimistic update를 통해 사용자 인터페이스를 더 신속하게 업데이트하고, 비동기 작업이 실패할 경우 롤백하는 방법을 익혔습니다. 이러한 기술들을 통해 사용자 경험을 개선하는 동시에 서버와 클라이언트 간의 상태 동기화 문제를 보다 효과적으로 관리할 수 있다는 것을 깨달았습니다.",
+          "다크 모드를 지원하여 사용자가 원하는 테마를 선택할 수 있습니다.",
       },
       {
-        title: "채팅방 구현",
+        title: "페이지 위치 추적",
         description:
-          "채팅방을 만들고, 채팅방을 나가거나, 채팅방을 만들어 채팅을 할 수 있도록 구현했습니다.",
-        solution:
-          "React-query의 invalidateQueries를 사용하여, 기술 퀴즈를 생성하고 바로 업데이트할 수 있도록 구현했습니다. 새로운 퀴즈가 생성된 후 해당 데이터를 최신 상태로 유지하기 위해 invalidateQueries를 통해 캐시된 데이터를 무효화하고, 서버에서 최신 데이터를 다시 가져오도록 했습니다. 이를 통해 사용자가 새로고침 없이도 최신 퀴즈 목록을 볼 수 있도록 개선하였습니다. 또한, 비동기 처리 중 발생할 수 있는 상태 관리 이슈를 방지하기 위해 optimistic update를 사용하여 사용자 경험을 향상시켰습니다.",
-        learned:
-          "이 문제를 해결하면서 React-query의 캐시 관리와 invalidateQueries의 역할을 깊이 이해하게 되었습니다. 특히, 서버 상태를 효율적으로 동기화하고, 사용자 경험을 향상시키기 위한 비동기 처리 전략의 중요성을 배웠습니다. 또한, optimistic update를 통해 사용자 인터페이스를 더 신속하게 업데이트하고, 비동기 작업이 실패할 경우 롤백하는 방법을 익혔습니다. 이러한 기술들을 통해 사용자 경험을 개선하는 동시에 서버와 클라이언트 간의 상태 동기화 문제를 보다 효과적으로 관리할 수 있다는 것을 깨달았습니다.",
+          "Intersection Observer API의 useInView를 사용하여 유저가 페이지의 어느 부분에 있는지를 추적하여 현재 보이는 섹션을 표시할 수 있습니다.",
+      },
+      {
+        title: "반응형 디자인",
+        description:
+          "모든 화면 크기에서 최적의 사용자 경험을 제공하기 위해 CSS Flexbox와 Grid 레이아웃을 활용하여 반응형 디자인을 구현했습니다.",
       },
     ],
-    period: "2024.09",
+
+    troubleShooting: [],
+    period: "2024.09 ~",
     people: {
       frontend: 1,
       backend: 0,
@@ -323,7 +309,7 @@ export const projectsData = [
       {
         skill: "TypeScript",
         reason:
-          "TypeScript는 정적 타입을 지원하는 프로그래밍 언어로, JavaScript의 확장된 기능을 제공합니다. 타입 시스템을 통해 코드의 안정성을 높이고, 개발자의 실수를 줄일 수 있습니다. 이를 통해 코드의 가독성을 높이고, 유지보수성을 향상시킬 수 있었습니다.",
+          "TypeScript을 통해 코드의 안정성을 높이고, 실수를 줄일 수 있었습니다.또한, 이를 통해 코드의 가독성을 높이고, 유지보수성을 향상시킬 수 있었습니다.",
       },
       {
         skill: "Tailwind CSS",
@@ -336,7 +322,7 @@ export const projectsData = [
           "다크모드 토글 기능을 구현하기 위해 Zustand를 사용했습니다. Zustand는 간단하고 직관적인 API를 제공하며, 컴포넌트 간의 상태 관리를 효율적으로 처리할 수 있습니다. 이를 통해 사용자 경험을 개선하고, 컴포넌트 간의 데이터 전달을 간소화할 수 있었습니다.",
       },
     ],
-    imageUrl: wordanalyticsImg,
+    imageUrl: myWebsiteMainImage,
     images: [],
   },
 ] as const;
