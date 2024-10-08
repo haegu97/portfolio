@@ -68,7 +68,8 @@ export const activitiesData = [
 export const projectsData = [
   {
     title: "ItZip",
-    description: "취업을 목표로 하고 있는 개발자를 위한 프로젝트입니다. ",
+    description:
+      "취업을 목표로 하고 있는 개발자를 위한 프로젝트입니다. 구인 정보, 학습하기, 블로그와 같은 기능을 제공합니다 ",
 
     features: [
       {
@@ -298,7 +299,7 @@ export const projectsData = [
       backend: 0,
     },
     github: "https://github.com/haegu97/portfolio",
-    demo: "",
+    demo: "https://haegus.vercel.app/",
     contributes: [],
     tags: [
       {
